@@ -17,7 +17,6 @@ class Lon extends Dongvat {
         super(ten);
     }
 
-    @Override
     boolean boi() {
         return false;
     }
@@ -33,12 +32,10 @@ class Vit extends Dongvat {
         super(ten);
     }
 
-    @Override
     boolean boi() {
         return true;
     }
-
-    @Override
+    
     boolean dibo() {
         return true;
     }
@@ -54,7 +51,6 @@ class Ca extends Dongvat {
         return true;
     }
 
-    @Override
     boolean dibo() {
         return false;
     }
