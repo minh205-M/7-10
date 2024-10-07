@@ -21,7 +21,6 @@ class Lon extends Dongvat {
         return false;
     }
 
-    @Override
     boolean dibo() {
         return true;
     }
@@ -32,10 +31,12 @@ class Vit extends Dongvat {
         super(ten);
     }
 
+    @Override
     boolean boi() {
         return true;
     }
-    
+
+    @Override
     boolean dibo() {
         return true;
     }
@@ -46,7 +47,6 @@ class Ca extends Dongvat {
         super(ten);
     }
 
-    @Override
     boolean boi() {
         return true;
     }
@@ -58,19 +58,19 @@ class Ca extends Dongvat {
 
 public class QLTrangtrai {
     public static void main(String[] args) {
-        List<Dongvat> dongvat = new ArrayList<>();
-        dongvat.add(new Lon("Piggy"));
-        dongvat.add(new Vit("Ducky"));
-        dongvat.add(new Ca("Goldie"));
+        List<Dongvat> animals = new ArrayList<>();
+        animals.add(new Lon("Piggy"));
+        animals.add(new Vit("Ducky"));
+        animals.add(new Ca("Goldie"));
 
-        printAnimalsThatCanSwimOrWalk(dongvat);
+        printAnimalsThatCanSwimOrWalk(animals);
     }
 
-    public static void printAnimalsThatCanSwimOrWalk(List<Dongvat> dongvat) {
+    public static void printAnimalsThatCanSwimOrWalk(List<Dongvat> animals) {
         System.out.println("Animals that can swim or walk:");
-        for (Dongvat dongvat : dongvat) {
-            if (dongvat.boi() || dongvat.dibo()) {
-                System.out.println(dongvat.ten);
+        for (Dongvat animal : animals) {
+            if (animal.boi() || animal.dibo()) {
+                System.out.println(animal.ten);
             }
         }
     }
